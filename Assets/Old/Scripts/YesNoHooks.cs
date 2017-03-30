@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿/*
+ * Copyright (C) ricardo 2017 - All Rights Reserved
+ */
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace OLD {

@@ -1,4 +1,7 @@
-﻿using System;
+﻿/*
+ * Copyright (C) ricardo 2017 - All Rights Reserved
+ */
+using System;
 
 namespace OLD {
     [Serializable]
