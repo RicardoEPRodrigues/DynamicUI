@@ -53,10 +53,10 @@ namespace OLD {
         /// Show this instance.
         /// </summary>
         public void Show() {
-            if (prefab == null)
-                return;
 
             if (instance == null) {
+                if (prefab == null)
+                    return;
                 instance = (GameObject)GameObject.Instantiate(prefab, Vector3.zero, Quaternion.identity);
                 GameObject.DontDestroyOnLoad(instance.gameObject);
                 OnFirstShow();

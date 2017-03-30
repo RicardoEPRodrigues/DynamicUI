@@ -12,15 +12,7 @@ namespace NEW {
     /// bussiness code.
     /// </summary>
     [Serializable]
-    public class Control {
-        public enum ShowResult {
-            // First time the UI is shown.
-            FIRST,
-            // The UI was shown.
-            OK,
-            // The UI wasn't able to be shown.
-            FAIL
-        }
+    public class Control : IControl {
 
         /// <summary>
         /// The prefab should be initialized with an UI prefab of you choice.
@@ -48,16 +40,6 @@ namespace NEW {
         /// IT MAY BE NULL!
         /// </summary>
         public GameObject instance;
-
-        /// <summary>
-        /// Gets a value indicating whether this instance is visible.
-        /// </summary>
-        /// <value><c>true</c> if this instance is visible; otherwise, <c>false</c>.</value>
-        public bool IsVisible {
-            get {
-                return instance != null && instance.activeSelf;
-            }
-        }
 
         public Control() {
         }
@@ -103,13 +85,21 @@ namespace NEW {
         }
 
         /// <summary>
-        /// Disable this instance.
+        /// Disables this instance.
         /// </summary>
         public void Disable() {
             if (instance == null)
                 return;
 
             instance.SetActive(false);
+        }
+
+        /// <summary>
+        /// Gets a value indicating whether this instance is visible.
+        /// </summary>
+        /// <return><c>true</c> if this instance is visible; otherwise, <c>false</c>.</return>
+        public bool IsVisible() {
+            return instance != null && instance.activeSelf;
         }
     }
 }
