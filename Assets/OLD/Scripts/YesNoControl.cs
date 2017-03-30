@@ -24,7 +24,7 @@ namespace OLD {
      * that only at this time are they available.
      */
         public override void OnFirstShow() {
-            var hooks = canvas.GetComponent<YesNoHooks>();
+            var hooks = Instance.GetComponent<YesNoHooks>();
             if (hooks == null)
                 return;
 
