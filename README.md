@@ -20,6 +20,7 @@ Create a Prefab starting with a Canvas and create a Hook, this bundle will allow
 > Play special attention to the way the buttons interact with the hook.
 
 **OLD**: Create a Class that inherits Control and implement your code there.
+
 **NEW**: Create a Class and implement your code there, instantiate a Control Class and use it to show/hide your UI.
 
 > See `MainScript.cs` and `YesNoControl.cs` to see how it is made.
