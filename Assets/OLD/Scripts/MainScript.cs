@@ -8,16 +8,17 @@ using UnityEngine;
 namespace OLD {
     public class MainScript : MonoBehaviour {
 
-        public string prefabPath = "Assets/OLD/Prefabs/UI/YesNoCanvas.prefab";
+        public string prefabPath = "OLD/Theme01/YesNoCanvas";
 
         void Start() {
-            // Instantiate a Control
-            YesNoControl control = new YesNoControl();
-            // Load controls prefab
-            // the `as` tag means that if the prefab can't be loaded it will be set to null.
-            control.prefab = UnityEditor.AssetDatabase.LoadAssetAtPath(prefabPath, typeof(GameObject)) as GameObject;
+
+            GameObject prefab = Resources.Load(prefabPath) as GameObject;
+
+            // Instantiate a Control and pass the path to the prefab.
+            YesNoControl control = new YesNoControl(prefab);
             // Use control function to show the control on screen.
-            control.SetAndShow("Are you sure, mate?", () => {
+            control.SetAndShow("Are you sure, mate?", 
+                () => {
                     Debug.Log("Clicked Yes!");
                 }, () => {
                     Debug.Log("Clicked no...");

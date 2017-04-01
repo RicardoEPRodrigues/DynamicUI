@@ -49,6 +49,13 @@ namespace OLD {
             }
         }
 
+        public Control() {
+        }
+
+        public Control(GameObject prefab) {
+            this.prefab = prefab;
+        }
+
         /// <summary>
         /// Show this instance.
         /// </summary>

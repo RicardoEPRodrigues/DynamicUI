@@ -2,6 +2,7 @@
  * Copyright (C) ricardo 2017 - All Rights Reserved
  */
 using System;
+using UnityEngine;
 
 namespace OLD {
     [Serializable]
@@ -13,6 +14,10 @@ namespace OLD {
         public Hooks.VoidFunc No { get; set; }
 
         public YesNoControl() : base() {
+            Message = String.Empty;
+        }
+
+        public YesNoControl(GameObject prefab) :base(prefab) {
             Message = String.Empty;
         }
 

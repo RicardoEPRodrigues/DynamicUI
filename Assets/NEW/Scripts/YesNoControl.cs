@@ -15,12 +15,6 @@ namespace NEW {
         private string message;
         private Hooks.VoidFunc yes, no;
 
-        public YesNoControl(string prefabPath) {
-            control = new Control();
-            control.prefab = UnityEditor.AssetDatabase.LoadAssetAtPath(
-                prefabPath, typeof(GameObject)) as GameObject;
-        }
-
         public YesNoControl(GameObject prefab) {
             control = new Control();
             control.prefab = prefab;
